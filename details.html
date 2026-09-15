@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styleF.css">
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <form  class="form-container"  id="information" onsubmit="return validate()">
+    <div id="list"></div>
+    <input type="text" id="name" placeholder="ENTER NAMWE" required><br>
+    <input type="text" id="username" placeholder="ENTER username" required><br>
+    <input type="password" id="password" placeholder="ENTER password" required><br>
+    <input type="tel" id="phone" placeholder="ENTER phone number" required><br>
+    select opetion <select id="category">
+      <option value="bba">bba</option>
+      <option value="bca">bca</option>
+      <option value="bcom">bcom</option>
+    </select>
+    <button type="submit" id="btn" onclick="validate()">submite</button>
+    <button type="button" id="btnx" onclick="xmldata()">for xml data</button>
+    <button type="button"id="btnj" onclick="jsondata()">for json data</button>
+
+  </form>
+  <script>
+    function validate(){
+      let phone=document.getElementById("phone").value;
+      if(!/^\d{10}$/.test(phone)){
+        alert("10 digite plz");
+        return false;
+      }
+      var name=document.getElementById("name").value;
+      var username=document.getElementById("username").value;
+      var password=document.getElementById("password").value;
+      if(name&&username&&password)
+      {
+        return true;
+      }else{
+        alert("give full information");
+        return false;
+      }
+
+
+    }
+    function xmldata(){
+      var xhttp=new XMLHttpRequest();
+      xhttp.onreadystatechange=function(){
+        if(this.readyState==4&&this.status==200){
+          document.getElementById("list").innerHTML=this.responseText;
+        }
+      }
+      xhttp.open("GET","course.xml",true);
+      xhttp.send();
+    }
+    function jsondata(){
+      var xhttp=XMLHttpRequest();
+      xhttp.onreadystatechange=function(){
+        if(this.readyState==4&& this.status==200){
+          document.getElementById("list").innerHTML=this.responseText;
+        }
+      }
+      xhttp.open("GET","MENU.json",true);
+      xhttp.send();
+    }
+  </script>
+  
+</body>
+</html>

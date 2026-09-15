@@ -1,0 +1,31 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+h1{
+    background-color: white;
+}
+.form-container,form{
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    max-width: 400px;
+    box-shadow: 0 0 10px #ccc;
+}
+input,textarea,button{
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+button{
+    background-color: blue;
+    border: none;
+    color: white;
+    transform: scale(0.95);
+}
+button:active {
+    transform: scale(0.95);
+    background-color: #0079a1;
+  }

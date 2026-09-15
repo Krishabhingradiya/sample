@@ -1,0 +1,24 @@
+[
+  {
+    "id":1,
+    "name":"kitu burger",
+    "category":"burger",
+    "price":"$5",
+    "description":"sp.burger."
+
+  },
+  {
+    "id": 2,
+    "name": "Veg Burger",
+    "category": "burger",
+    "price": "$5",
+    "description": "Healthy veg burger."
+  },
+  {
+    "id": 3,
+    "name": "Cola Drink",
+    "category": "drink",
+    "price": "$2",
+    "description": "Chilled cola drink."
+  }
+]

@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+<button type="button" id="btn" onclick="xmlData()">XML</button>
+<button type="button" id="btn1" onclick="jsonData()">JSON</button>
+<div id="demo"></div>
+<div id="demo1"></div>
+
+<script>
+	function xmlData(){
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			if(this.readyState == 4 &&  this.status == 200){
+				document.getElementById("demo").innerHTML = this.responseText;
+			}
+		}
+		xhttp.open("GET","cat.xml",true);
+		xhttp.send();
+	}
+	function jsonData(){
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			if(this.readyState == 4 &&  this.status == 200){
+				document.getElementById("demo1").innerHTML = this.responseText;
+			}
+		}
+		xhttp.open("GET","stu.json",true);
+		xhttp.send();
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+h2 {
+    color: #333;
+}
+.form-container, form {
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    max-width: 400px;
+    box-shadow: 0 0 10px #ccc;
+}
+input, textarea, button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+}

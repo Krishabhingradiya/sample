@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admission Inquiry</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h2>Admission Inquiry Form</h2>
+    <form id="inquiryForm" onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Full Name" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="tel" id="phone" placeholder="Phone Number" required><br>
+        <textarea id="message" placeholder="Your Query" required></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let phone = document.getElementById("phone").value;
+            if (!/^\d{10}$/.test(phone)) {
+                alert("Phone number must be 10 digits");
+                return false;
+            }
+            alert("phone number submitted successfully!");
+            return true;
+            var name=document.getElementById('name').value;
+            var email=document.getElementById('email').value;
+            var message=document.getElementById('message').value;
+            if(name&&email&&message)
+            {
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

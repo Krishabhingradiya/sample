@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses>
+    <course>
+        <name>Bachelor of Science</name>
+        <duration>3 Years</duration>
+    </course>
+    <course>
+        <name>Bachelor of Arts</name>
+        <duration>3 Years</duration>
+    </course>
+    <course>
+        <name>Master of Computer Applications</name>
+        <duration>2 Years</duration>
+    </course>
+</courses>

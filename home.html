@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - College Courses</title>
+    <link rel="stylesheet" href="style1.css">
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <form>
+    <h2>Courses Offered</h2>
+    <div id="course-list"></div>
+    <input type="text" id="name" name="Name"placeholder="enter yopur respective name"required>
+    <button type="submit" onclick="xmldata()">xml</button>
+    <button type="button" id="btn" onclick="xmldata()">XML</button>
+    <button type="button" id="btn2" onclick="jsondata()">json</button>
+    <button type="button" id="btns" >submit</button>
+      <script>
+        function xmldata(){
+            var xhttp = new XMLHttpRequest()
+             xhttp.onreadystatechange=function(){
+                if(this.readyState==4&&this.status==200){
+                    document.getElementById('course-list').innerHTML=this.responseText;
+                }
+            }
+            xhttp.open("GET","course.xml",true);
+            xhttp.send();
+                
+    
+        }
+    function jsondata(){
+        var xhttp= new XMLHttpRequest()
+        xhttp.onreadystatechange=function(){
+            if(this.readyState==4&&this.status==200){
+                document.getElementById('course-list').innerHTML=this.responseText;
+
+            }
+        }
+        xhttp.open("GET","MENU.json",true);
+        xhttp.send();
+    }
+    $(document).ready(function(){
+        $('#btn').click(function(){
+            alert("button is cliced");
+        });
+    });
+    $(document).ready(function(){
+        $('#btns').hover(
+            function(){
+                $(this).css("background-color","lightblue");
+            },
+            function(){
+                $(this).css("background-color","lightgreen");
+            }
+        );
+    });
+        
+    </script>
+</form>
+</body>
+</html>
