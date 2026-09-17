@@ -1,2 +1,3 @@
 # this is local repo
-this is sample
+this is from feture1 branch 
+tying pull
